@@ -27,7 +27,8 @@ gltfloader.setDRACOLoader(dracoloader)
  * Base
  */
 // Debug
-const gui = new dat.GUI()
+const gui = new dat.GUI({closed : true})
+
 // const debugObject = {}
 
 
@@ -201,7 +202,7 @@ window.addEventListener('click', (event) => {
     console.log(currentIntersect);
     if(currentIntersect)
     {
-        window.open("https://www.google.com")
+        window.open(URL = "https://www.google.com/")
     }
 })
 
@@ -236,6 +237,7 @@ const tick = () =>
     //set Raycaster
     raycaster.setFromCamera(mouse,camera)
     const intersect = raycaster.intersectObjects(object)
+    
 
     if(intersect.length)
     {
